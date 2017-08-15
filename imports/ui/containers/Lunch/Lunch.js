@@ -23,8 +23,11 @@ const Lunch = ({ filteredLunch, leaveCurrentLunch }) => {
         <Link to={`/profile/${name[0]._id}`}>
           <Gravatar email={name[0].emails[0].address} className="gravatarImage" size={150} />
         </Link>
-          <p className="lunchBudName">{name[0].profile.fullName}</p>
-          <p>Interests: {name[0].profile.interests.join(', ')}</p>
+        <p className="lunchBudName">{name[0].profile.fullName}</p>
+        <p className="interests">Interests:</p>
+        <p>{name[0].profile.interests.join(', ')}</p>
+        <p className="phoneNumber">Phone Number:</p>
+        <p>{name[0].profile.phoneNumber}</p>
       </li>
     )
   });
@@ -58,6 +61,10 @@ const Lunch = ({ filteredLunch, leaveCurrentLunch }) => {
                   ))}
                 </ul>
               </div>
+              <div className="lunchCreationDate">
+                <h2>Lunch Creation Date:</h2>
+                <p>{Moment(filteredLunch.filteredLunch[0].createdOn).fromNow()}</p>
+              </div>
             </div>
           </div>
           <div className="leaveLunch">
@@ -67,7 +74,7 @@ const Lunch = ({ filteredLunch, leaveCurrentLunch }) => {
               label="Leave this lunch"
               primary={true}
               style={styles.button}
-              onTouchTap={() => {leaveCurrentLunch()}}
+              onTouchTap={() => { leaveCurrentLunch() }}
             />
           </div>
         </div>

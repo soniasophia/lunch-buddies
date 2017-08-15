@@ -66,8 +66,15 @@ h2 {
 
 .lunchBudName {
     font-weight: bold;
+    font-size: 20px;
+    margin-top: 1rem;
 }
 
 .leaveLunch {
     margin-bottom: 1.5rem;
+}
+
+.interests, .phoneNumber {
+    margin-top: 2rem;
+    font-weight: bold;
 }
