@@ -40,6 +40,10 @@
     font-size: 12px;
 }
 
+.signup .filterList {
+    display: block;
+}
+
 .signup .unknownEmailMessage {
     padding: 0 1rem;
     line-height: 1.42rem;
